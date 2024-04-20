@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react'
+import React from 'react'
 import './projects.css'
 import img1 from '../../assets/sucideAnalysis (2).png'
 import img2 from '../../assets/snapShare.png'
