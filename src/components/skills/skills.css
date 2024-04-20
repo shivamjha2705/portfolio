@@ -1,0 +1,131 @@
+#skills{
+    height: max-content;
+}
+.skills_box{
+    background: transparent;
+    text-align: center;
+    /* padding: 12rem 8rem 8rem 12rem; */
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    gap: 3rem;
+    width: 100%;
+    padding-bottom: 2rem;
+}
+#skills img{
+    width: 2rem;
+    margin: auto;
+}
+.icon-box{
+    border-radius: 5px;
+    background: var(--color-bg);
+    padding-top: 7px;
+    transition: all ease-in-out 400ms;
+}
+.other_tech_skills,.designer_skills{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+    margin-top: 30px;
+    margin-bottom: 70px;
+    flex-wrap: wrap;
+}
+.other_tech_skills .icon-box{
+    padding: 20px;
+}
+.designer_skills{
+    background: #2C2C6C;
+    padding: 30px 20px 30px 20px;
+}
+section > h3{
+    margin-bottom: 2rem;
+}
+.icon-box:hover{
+    scale: 0.9;
+    box-shadow: none;
+    background: #2C2C6C;
+
+}
+.icon-box p{margin-top: 0.5rem;}
+.java-shadow{
+    box-shadow: #CA3132 0px 6px 6px 0px;
+}
+.python-shadow{
+    box-shadow: #e1d480 0px 6px 6px 0px;
+}
+.dbms-shadow{
+    box-shadow: #3b68db 0px 6px 6px 0px;
+}
+.sql-shadow{
+    box-shadow: #1DC7C0 0px 6px 6px 0px;
+}
+.pandas-shadow{
+    box-shadow: #E70488 0px 6px 6px 0px;
+}
+.html-shadow{
+    box-shadow: #f97316 0px 6px 6px 0px;
+}
+.css-shadow{
+    box-shadow: #2196f3 0px 6px 6px 0px;
+}
+.js-shadow{
+    box-shadow: #EAB308 0px 6px 6px 0px;
+}
+.react-shadow{
+    box-shadow: #1E88E5 0px 6px 6px 0px;
+}
+.bs-shadow{
+    box-shadow: #8312FA 0px 6px 6px 0px;
+}
+.tw-shadow{
+    box-shadow: #15B8C5 0px 6px 6px 0px;
+}
+.github-shadow{
+    box-shadow: #ffff 0px 6px 6px 0px;
+}
+.firebase-shadow{
+    box-shadow: #EAB308 0px 6px 6px 0px;
+}
+.figma-shadow{
+    box-shadow: #a259ff 0px 6px 6px 0px;
+}
+.photoshop-shadow{
+    box-shadow: #26C9FF 0px 6px 6px 0px;
+}
+.sketch-shadow{
+    box-shadow: #FDAD00 0px 6px 6px 0px;
+}
+.adobe-shadow{
+    box-shadow: #FB28BB 0px 6px 6px 0px;
+}
+.prototype-shadow{
+    box-shadow: #a48989 0px 6px 6px 0px;
+}
+.wireframe-shadow{
+    box-shadow: #E6646E 0px 6px 6px 0px;
+}
+.visual-shadow{
+    box-shadow: #F1C48B 0px 6px 6px 0px;
+}
+.story-shadow{
+    box-shadow: #3DC285 0px 6px 6px 0px;
+}
+
+/*================ media query (small devices)============*/
+@media screen and (max-width:600px){
+    .container{
+        width: auto;
+    }
+    .skills_box{
+        grid-template-columns: repeat(2,1fr);
+        gap: 1.5rem;
+        padding: 10px;
+        padding-bottom: 2rem;
+    }
+    section > h2{
+        margin-bottom: 2rem;
+    }
+    
+}
+
+ 
