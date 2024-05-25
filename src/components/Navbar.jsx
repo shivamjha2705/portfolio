@@ -69,7 +69,7 @@ const Navbar = () => {
                     setToggle(!toggle);
                   }}
                 >
-                   <a href={`/${Link.id}`}>
+                   <a href={`#${Link.id}`}>
                     <i className={Link.iconClass}></i>
                   </a>
                 </li>
