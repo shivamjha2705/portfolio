@@ -3,7 +3,7 @@ import backend from "./backend.png";
 import creator from "./creator.png";
 import mobile from "./mobile.png";
 import web from "./web.png";
-import github from "./github.png";
+import github from "./tech/github.png";
 import live from "./live.png";
 import watsapp from "./watsapp.png";
 import mail from "./mail.png";
