@@ -9,7 +9,7 @@ import {
     reactjs,
     redux,
     tailwind,
-    
+    github,
     sql,
     figma,
     bootstrap,
@@ -110,10 +110,10 @@ import {
       name: "SQL",
       icon: sql,
     },
-    // {
-    //   name: "GitHub",
-    //   icon: github,
-    // },
+    {
+      name: "GitHub",
+      icon: github,
+    },
     {
       name: "figma",
       icon: figma,
