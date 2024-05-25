@@ -1,22 +1,25 @@
-import React from 'react'
-import Header from './components/header/Header'
-import Nav from './components/nav/Nav'
-import About from './components/about/About'
-import Skills from './components/skills/Skills'
-import Projects from './components/projects/Projects'
-import Contact from './components/contact/Contact'
-import Footer from './components/footer/Footer'
-const App = () => {
+import { BrowserRouter } from "react-router-dom"
+// -----all components----
+import {About, Contact, Experience, Feedbacks, Hero, Navbar, Tech, Works, StarsCanvas } from './components'
+const App = ()=> {
   return (
-    <>
-        <Header/>
-        <Nav/>
-        <About />
-        <Skills/>
-        <Projects/>
-        <Contact />
-        <Footer/>
-    </>
+    <BrowserRouter>
+    <div className="relative z-0 bg-primary">
+    <div className="bg-hero-pattern bg-cover bg-no-repeat bg-center">
+      <Navbar/>
+      <Hero/>
+    </div>
+    <About/>
+    <Experience/>
+    <Tech/>
+    <Works/>
+    <Feedbacks/>
+    <div className="relative z-0">
+      <Contact/>
+      <StarsCanvas/>
+    </div>
+    </div>
+    </BrowserRouter>
   )
 }
 
