@@ -3,7 +3,7 @@ import { Tilt } from "react-tilt";
 import { motion } from "framer-motion";
 
 import { styles } from "../styles";
-import { github, live } from "../assets";
+import {  live } from "../assets";
 import { SectionWrapper } from "../hoc";
 import { projects } from "../constants";
 import { fadeIn, textVariant } from "../utils/motion";
@@ -65,11 +65,11 @@ const ProjectCard = ({
                 className="black-gradient border-2 w-10 h-10 rounded-full flex justify-center items-center cursor-pointer"
                 title="Source Code"
               >
-                <img
+                {/* <img
                   src={github}
                   alt="source code"
                   className="w-1/2 h-1/2 object-contain"
-                />
+                /> */}
               </div>
             )}
           </div>
