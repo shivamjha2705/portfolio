@@ -33,7 +33,7 @@ const BallCanvas =({tech_icon,index,title}) => {
 
 const Tech = () => {
   return (
-    <div className='flex flex-row flex-wrap justify-center gap-10 overflow-hidden xs:overflow-auto'>
+    <div className='flex flex-row flex-wrap justify-center gap-10 overflow-hidden xs:overflow-visible'>
       {technologies.map((technology,index) => (
         <div className='w-28 h-28' key={technology.name} title={technology.name}>
           <BallCanvas tech_icon={technology.icon} index={index} title={technologies.name} />
