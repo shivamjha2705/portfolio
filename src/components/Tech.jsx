@@ -4,11 +4,11 @@ import { fadeIn} from '../utils/motion'
 import { SectionWrapper } from "../hoc";
 import { technologies } from "../constants";
 
-const BallCanvas =({tech_icon,index,title}) => {
+const BallCanvas =({tech_icon,title}) => {
   return(
     <Tilt className="xs:w-[100px] w-full">
     <motion.div
-      variants={fadeIn("left", "spring", 0.5 * index, 0.75)}
+      variants={fadeIn("left", "spring", 0.5 * title, 0.75)}
       className='w-full green-pink-gradient p-[2px] xs:rounded-full rounded-[20px] shadow-card'
     >
     <div
@@ -22,7 +22,7 @@ const BallCanvas =({tech_icon,index,title}) => {
     <img
           src={tech_icon}
           alt={title}
-          className='w-14 h-14 object-contain'
+          className='xs:w-14 w-auto h-14 object-contain'
         />
 
     </div>
@@ -33,10 +33,10 @@ const BallCanvas =({tech_icon,index,title}) => {
 
 const Tech = () => {
   return (
-    <div className='flex flex-row flex-wrap justify-center gap-10'>
-      {technologies.map((technology,index) => (
+    <div className='flex flex-row flex-wrap justify-center gap-10 overflow-hidden'>
+      {technologies.map((technology) => (
         <div className='w-28 h-28' key={technology.name} title={technology.name}>
-          <BallCanvas tech_icon={technology.icon} index={index} title={technologies.name} />
+          <BallCanvas tech_icon={technology.icon} title={technologies.name} />
         </div>
       ))}
     </div>
