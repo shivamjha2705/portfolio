@@ -1,4 +1,4 @@
-import { React, useState, useRef } from 'react';
+import { useState, useRef } from 'react';
 import { motion } from 'framer-motion';
 import emailjs from '@emailjs/browser';
 import { styles } from '../styles';
@@ -6,6 +6,7 @@ import { EarthCanvas } from './canvas';
 import { SectionWrapper } from '../hoc';
 import { slideIn } from '../utils/motion';
 import { watsapp, mail } from '../assets';
+import { useInView } from 'react-intersection-observer';
 
 const Contact = () => {
   const formRef = useRef();
@@ -13,8 +14,9 @@ const Contact = () => {
     name: '',
     email: '',
     message: ''
-  })
+  });
   const [loading, setLoading] = useState(false);
+
   const handleChange = (e) => {
     const { target } = e;
     const { name, value } = target;
@@ -29,38 +31,39 @@ const Contact = () => {
     e.preventDefault();
     setLoading(true);
 
-    emailjs.send('service_mnvk6yd', 'template_nh3fj1j',
+    emailjs.send(
+      'service_mnvk6yd',
+      'template_nh3fj1j',
       {
         from_name: form.name,
         to_name: 'Shivam Kumar',
         from_email: form.email,
         to_email: 'shivam0510kr@gmail.com',
         message: form.message,
-
       },
       'ieaThHoaGAz0TsjiH'
-    )
-      .then(() => {
-        setLoading(false);
-        alert('Thank you, I will get back to you as soon as possible !!');
+    ).then(() => {
+      setLoading(false);
+      alert('Thank you, I will get back to you as soon as possible !!');
 
-        setForm({
-          name: '',
-          email: '',
-          message: ''
-        })
+      setForm({
+        name: '',
+        email: '',
+        message: ''
+      });
 
-      }, (error) => {
-        setLoading(false);
-        console.log(error);
-        alert('oops ! something went wrong');
-      })
-  }
+    }, (error) => {
+      setLoading(false);
+      console.log(error);
+      alert('Oops! Something went wrong');
+    });
+  };
+
+  // Lazy load EarthCanvas
+  const { ref, inView } = useInView({ triggerOnce: true });
 
   return (
-    <div
-      className={`xl:mt-12 flex xl:flex-row flex-col-reverse gap-10 overflow-hidden`}
-    >
+    <div className='xl:mt-12 flex xl:flex-row flex-col-reverse gap-10 overflow-hidden'>
       <motion.div
         variants={slideIn("left", "tween", 0.2, 1)}
         className='flex-[0.75] bg-black-100 p-8 rounded-2xl'
@@ -72,30 +75,21 @@ const Contact = () => {
           </div>
           <div className='flex flex-col gap-5'>
             <div
-              onClick={()=>{window.open('https://wa.me/+918581049721',"_blank")}}
+              onClick={() => window.open('https://wa.me/+918581049721', "_blank")}
               className="black-gradient border-2 w-12 h-12 rounded-full flex justify-center items-center cursor-pointer"
               title="Watsapp"
             >
-              <img
-                src={watsapp}
-                alt="Watsapp"
-                className="w-100 h-100 object-contain"
-              />
+              <img src={watsapp} alt="Watsapp" className="w-100 h-100 object-contain" />
             </div>
             <div
-            onClick={()=>{window.open('mailto:shivam0510kr@gmail.com',"_blank")}}
+              onClick={() => window.open('mailto:shivam0510kr@gmail.com', "_blank")}
               className="black-gradient border-2 w-12 h-12 rounded-full flex justify-center items-center cursor-pointer"
               title="Gmail"
             >
-              <img
-                src={mail}
-                alt="Gmail"
-                className="w-1/2 h-1/2 object-contain"
-              />
+              <img src={mail} alt="Gmail" className="w-1/2 h-1/2 object-contain" />
             </div>
           </div>
         </div>
-
 
         <form
           ref={formRef}
@@ -146,10 +140,11 @@ const Contact = () => {
       </motion.div>
 
       <motion.div
+        ref={ref}
         variants={slideIn("right", "tween", 0.2, 1)}
         className='xl:flex-1 xl:h-auto md:h-[550px] h-[350px]'
       >
-        <EarthCanvas />
+        {inView && <EarthCanvas />}
       </motion.div>
     </div>
   );
