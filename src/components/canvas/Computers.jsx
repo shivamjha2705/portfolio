@@ -1,7 +1,9 @@
-import {React,Suspense,useEffect,useState} from 'react';
+/* eslint-disable react/no-unknown-property */
+import {Suspense,useEffect,useState} from 'react';
 import { Canvas } from '@react-three/fiber';
 import { OrbitControls,Preload,useGLTF } from '@react-three/drei';
 import CanvasLoader from '../Loader';
+import PropTypes from 'prop-types';
 
 const Computers = ({isMobile}) => {
   const computer = useGLTF('./desktop_pc/scene.gltf',true)
@@ -26,6 +28,9 @@ const Computers = ({isMobile}) => {
       />
     </mesh>
   );
+};
+Computers.propTypes = {
+  isMobile: PropTypes.bool.isRequired,
 };
 
 const ComputerCanvas = () => {
