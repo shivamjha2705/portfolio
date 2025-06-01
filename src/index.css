@@ -12,6 +12,9 @@
   scroll-behavior: smooth;
   color-scheme: dark;
 }
+.scrollbar-hidden::-webkit-scrollbar {
+  display: none;
+}
 
 .hash-span {
   margin-top: -100px;
