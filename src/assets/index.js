@@ -36,6 +36,7 @@ import suicideAnalysis from "./projects/sucideAnalysis.png";
 import carvaan from "./projects/Carvaan.png"
 import neighborhue from "./projects/neighborhue.png";
 import rennovation from "./projects/rennovtion.png";
+import grocery from "./projects/grocery.png";
 
 import testimonial_1 from "./testimonials/jaganathanSir.jpg";
 import testimonial_2 from "./testimonials/arya.png";
@@ -70,6 +71,7 @@ export {
   bit_logo,
   techavtar,
 
+  grocery,
   carvaan,
   neighborhue,
   rennovation,

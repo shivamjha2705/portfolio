@@ -15,6 +15,7 @@ import {
   bootstrap,
   bit_logo,
   techavtar,
+  grocery,
   carvaan,
   neighborhue,
   rennovation,
@@ -204,6 +205,31 @@ const testimonials = [
 const projects = [
   {
     id: "1",
+    name: "Grocery Organic Store",
+    description:
+      `Grocery Organic Store is a responsive and user-friendly grocery e-commerce platform built to simplify online grocery shopping. The platform offers a wide range of products categorized for easy discovery, complete with real-time search functionality and detailed product views. It features an intuitive shopping cart experience, allowing users to add, remove, and update item quantities seamlessly.
+
+    While the project primarily focuses on the frontend, it also integrates with a dummy JSON API deployed on Render, simulating real-world backend interactions. This API handles product listings and enables dynamic content rendering on the site. The UI is developed using React, HTML, CSS, and JavaScript to deliver a clean, responsive experience across all devices.
+
+    The project emphasizes performance, visual clarity, and modular design. It follows best practices in React for component-based development and state management using hooks. The deployment and integration of a dummy backend also showcase my capability to connect frontend interfaces with API endpoints and simulate full-stack behavior, even when the backend is mocked.`,
+    whatIDid: "Built the entire frontend using React, HTML, and CSS. Designed UI components like product cards, filters, cart, and checkout. Integrated dummy backend API (deployed on Render) using Node JS, Express JS for product listing and cart operations. Ensured full responsiveness and dynamic rendering.",
+    myRole: "Frontend Developer with backend exposure (API integration & mock data simulation).",
+    tags: [
+      { name: "ReactJs", color: "violet-text-gradient" },
+      { name: "HTML", color: "green-text-gradient" },
+      { name: "CSS", color: "pink-text-gradient" },
+      { name: "JavaScript", color: "orange-text-gradient" },
+      { name: "Node.js", color: "blue-text-gradient" },
+      { name: "Express.js", color: "red-text-gradient" }
+    ],
+    image: grocery,
+    type: "Web",
+    note: "Ongoing project — features are still being developed",
+    source_code_link: " https://github.com/shivamjha2705/grocery_wale",
+    livePreview: "https://grocery-wale-ten.vercel.app"
+  },
+  {
+    id: "2",
     name: "Carvaan",
     description:
       `Carvaan is a comprehensive travel booking platform designed to enhance the overall experience for both travelers and travel businesses. It allows users to explore a wide variety of destinations, complete with detailed information, images, and real-time availability. The platform supports user authentication via secure OTP verification and Google login, providing a smooth and trustworthy login experience. Users can create a personalized wishlist to save their favorite destinations and easily access them later. The site features intuitive navigation and responsive design, ensuring seamless usability across devices including mobiles, tablets, and desktops.
@@ -224,7 +250,7 @@ const projects = [
     livePreview: "https://carvaan.co"
   },
   {
-    id: "2",
+    id: "3",
     name: "Neighborhue",
     description:
       "Neighborhue is a smart neighborhood recommendation platform that uses Hue AI to help users discover ideal places to live based on lifestyle, preferences, and location. It features a blog, pricing plans, contact form, and seamless Google Ads integration, wrapped in a fully responsive interface.",
@@ -244,7 +270,7 @@ const projects = [
     livePreview: "https://test0n.netlify.app"
   },
   {
-    id: "3",
+    id: "4",
     name: "Portrait Renovations",
     description:
       "A modern landing page template designed specifically for renovation businesses, showcasing services, testimonials, and lead generation features. The layout adapts beautifully to any screen size, offering professional and clean UI.",
@@ -262,7 +288,7 @@ const projects = [
     livePreview: "https://portrait-renovations.netlify.app"
   },
   {
-    id: "4",
+    id: "5",
     name: "Snapshare",
     description:
       "Snapshare is a social image-sharing platform that encourages creativity and collaboration. Users can upload, comment, and save images (pins) to their collections. It mimics a Pinterest-like interface powered by Sanity CMS.",
@@ -281,7 +307,7 @@ const projects = [
     livePreview: "https://snapshare-sk.netlify.app/"
   },
   {
-    id: "5",
+    id: "6",
     name: "Netflix UI",
     description:
       "A front-end replica of the Netflix homepage using real movie APIs to dynamically display titles, genres, and poster previews. Focused on UI responsiveness and dynamic rendering of components.",
@@ -298,7 +324,7 @@ const projects = [
     livePreview: "https://netflix-clone-1bf8b.web.app/"
   },
   {
-    id: "6",
+    id: "7",
     name: "Modern Weather App",
     description:
       "This modern web-based weather app uses real-time weather APIs to display current weather conditions of any searched city. It includes temperature, humidity, and wind data.",
@@ -315,7 +341,7 @@ const projects = [
     livePreview: "https://shivamjha2705.github.io/Modern_Weather_App/"
   },
   {
-    id: "7",
+    id: "8",
     name: "Investo",
     description:
       "A UX case study for an app that helps users manage NFTs and digital assets in a single dashboard. Focused on user journey, pain points, and minimalist UI structure.",
@@ -331,7 +357,7 @@ const projects = [
     livePreview: "https://bit.ly/3M818gD"
   },
   {
-    id: "8",
+    id: "9",
     name: "Suicide Analysis",
     description:
       "A data-driven dashboard analyzing suicide trends across India using Power BI and Python. It presents visuals that can help inform policy-making and awareness initiatives.",
